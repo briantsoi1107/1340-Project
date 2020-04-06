@@ -10,7 +10,7 @@ This is a RPG game based in an ancient Japanese village. You will be casting a n
 ## How to play
 In generall, there are 4 actions to choose from at each round: 
 1. Attack: deal damage to the enemy based on your attack power
-2. Ability: Cast mana to deal 
+2. Ability: Consume mana to cast more powerful moves
 3. Guard: Reduce damage taken for the next round
 4. Items: Use items you have collected from enemies to heal/increase attack power or defense
 
