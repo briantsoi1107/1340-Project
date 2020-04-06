@@ -15,5 +15,5 @@ In generall, there are 4 actions to choose from at each round:
 4. Items: Use items you have collected from enemies to heal/increase attack power or defense
 
 ## List of Functions/Features
-Rand() - 1.Generation of random game sets or events
-include <fstream> - 4. File input/output (e.g., for loading/saving game status)
+1. Rand() - Generation of random game sets or events
+2. include <fstream> - File input/output (e.g., for loading/saving game status)
