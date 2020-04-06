@@ -17,4 +17,4 @@ In general, there are 4 actions to choose from at each round:
 
 ## List of Functions/Features
 1. Rand() - Generation of random game sets or events
-2. include <fstream> - File input/output (e.g., for loading/saving game status)
+2. Use of fstream - File input/output (e.g., for loading/saving game status)
