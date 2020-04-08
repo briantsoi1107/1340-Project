@@ -1,5 +1,5 @@
-# 1340-Project
-A text-based game written in C++.
+# 1340 Group Project
+A text-based role-playing game written in C++.
 
 ## Group Members
 1. **Tsoi Ming Hung 3035684946**
