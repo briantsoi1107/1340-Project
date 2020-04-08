@@ -6,7 +6,7 @@ A text-based game written in C++.
 2. **Chan Kam Wa 3035693935**
 
 ## Introduction
-This is a RPG game based in an ancient Japanese village. You will be casting a nameless ninja who has given a mission to assassinate the infamous emperor of the country. The game starts as you has reached the enemies' base - 'the Himeji Castle'. There are mutiple stages to play before you can finally meet the emperor. The game's difficulty gradually increases as you reach higher stages. The key to win is to carefully decide which action to take at different stages.
+This is a role-playing game based in an ancient Japanese village. You will be casting a nameless ninja who has given a mission to assassinate the infamous emperor of the country. The game starts as you has reached the enemies' base - 'the Himeji Castle'. There are mutiple stages to play before you can finally meet the emperor. The game's difficulty gradually increases as you reach higher stages. Like normal RPG, the key to win is to carefully decide which action to take at different stages.
 
 ## How to play
 In general, there are 4 actions to choose from at each round: 
@@ -18,4 +18,5 @@ In general, there are 4 actions to choose from at each round:
 ## List of Functions/Features
 1. Rand() - Generation of random game sets or events
 2. Use of fstream - File input/output (e.g., for loading/saving game status)
-3. Uer-defined function included (account, battle, useitem)
+3. Each stage will be declared as an individual function for better recognition
+3. User-defined functions included (account, battle, useitem, etc)
