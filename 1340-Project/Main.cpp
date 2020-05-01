@@ -33,8 +33,7 @@ void battle(Action& a, int enemyhp, int enemyatk, int enemydef, string enemyname
         }
         Sleep(2000);
         system("CLS");
-        cout << enemyname << "'s turn:"<<endl;
-        cout << "You are hit!" << endl;
+        cout << enemyname << "has attacked you!\n";
         a.hp -= enemyatk - a.def[stage];
     }
     if (enemyhp <= 0) {
