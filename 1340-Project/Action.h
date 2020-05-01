@@ -5,16 +5,16 @@
 using namespace std;
 class Action{
 private:
-	vector<int> itemsgot = { 0,2,3 };
-	string itemslist[7]={ "Shuriken","Caltrop","Poisons","Medicine","Book of Defensive Skills ","Book of Advanced Ninjutsu" };
+	string itemslist[6]={ "Shuriken","Caltrop","Poison","Medicine","Book of Defensive Skills ","Book of Advanced Ninjutsu" };
 public:
+	vector<int> itemsgot = { 0,2,3 };
 	string name;
-	int hp=100, atk=10, def=5;
-	void printstatus();
-	void attack(int& enemyhp, int enemydef);
-	void items(int& enemyhp);
+	int maxhp[4] = { 50,100,150,200 }, hp = 50, atk[4] = { 40,50,60,70 }, def[4] = { 0,5,15,25 };
+	void printstatus(int stage);
+	void attack(int& enemyhp, int enemydef, int stage);
+	void items(int& enemyhp, int stage);
 	void gotitem();
-	void defend(int enemyatk);
+	void guard(int enemyatk, int stage);
 
 
 };

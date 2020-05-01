@@ -6,19 +6,19 @@
 
 using namespace std;
 
-void Action::printstatus() {
+void Action::printstatus(int stage) {
     cout << name << endl
-        << "HP: " << hp << endl
-        << "Attack: " << atk << endl
-        << "Defense: " << def << endl
+        << "HP: " << hp <<"/"<<maxhp[stage]<<endl
+        << "Attack: " << atk[stage] << endl
+        << "Defense: " << def[stage] << endl
         << endl;
 }
 
-void Action::attack(int& enemyhp,int enemydef) {
-
+void Action::attack(int& enemyhp,int enemydef, int stage) {
+	srand(time(0));
     int hit = rand() % 10 + 1;
     if (hit > 1) {
-        enemyhp -= (atk - enemydef);
+        enemyhp -= (atk[stage] - enemydef);
 		cout << "Hit!" << endl;
     }
     else {
@@ -27,23 +27,25 @@ void Action::attack(int& enemyhp,int enemydef) {
 }
 
 void Action::gotitem() {
-	int getitem = rand() % 7;
-	cout << "you have collected a " << itemslist[getitem] << " from enemies!" << endl;
+	srand(time(0));
+	int getitem = rand() % 6;
+	cout << "you have collected a " << itemslist[getitem] << "!" << endl;
 	itemsgot.push_back(getitem);
 }
 
 
-void Action::items(int& enemyhp) {
+void Action::items(int& enemyhp, int stage) {
 	if (itemsgot.size() == 0) {
 		cout << "You have no item!" << endl;
 		return;
 	}
 	int i = 1;
-	cout << "Your items: \n(enter '0' to return)\nChoice: " << endl;
+	cout << "Your items: \n(enter '0' to return)\n";
 	for (auto it = itemsgot.begin(); it != itemsgot.end(); ++it) {
 		cout << i << ". " << itemslist[*it] << endl;
 		++i;
 	}
+	cout << "Choice: ";
 	cin >> i;
 	if (i == 0)
 		return;
@@ -61,27 +63,27 @@ void Action::items(int& enemyhp) {
 		hp -= 10;
 		break;
 	case 3:
-		cout << "Your HP has been recovered by 10." << endl;
-		hp += 10;
-		if (hp > 100) {
-			hp = 100;
+		cout << "Your HP has been recovered by 15." << endl;
+		hp += 15;
+		if (hp > maxhp[stage]) {
+			hp = maxhp[stage];
 		}
+		break;
 	case 4:
 		cout << "Your defense has increased by 10." << endl;;
-		def += 10;
+		def[stage] += 10;
 		break;
 	case 5:
 		cout << "Your attack power has increased by 10." << endl;
-		atk += 10;
+		atk[stage] += 10;
 		break;
 	}
 	itemsgot.erase(itemsgot.begin() + i - 1);
 
 }
 
-void Action::defend(int enemyatk) {
-
-	hp += def;
+void Action::guard(int enemyatk, int stage) {
+	hp += def[stage];
 	cout << "Blocked!" << endl;
 }
 
