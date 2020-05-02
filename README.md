@@ -20,3 +20,5 @@ In general, there are 3 actions to choose from at each round:
 3. printstatus - output the current status of the player (hp, def, atk etc)
 4. battle - a function implementing the cycle of player actions and enemy actions
 5. sleep and clear screen - improves text outputting
+6. use of vector to store items - dynamic memory management
+7. Use of class seperated in header file and .cpp file - program codes in multiple files
